@@ -8,7 +8,8 @@
 
             List<Student> students = new List<Student>();
             StudentManagement studentManagement = new StudentManagement();
-            studentManagement.Display();
+            //studentManagement.Display();
+            studentManagement.RetriveRecords();
             
         }
     }
