@@ -9,7 +9,8 @@
             List<Student> students = new List<Student>();
             StudentManagement studentManagement = new StudentManagement();
             //studentManagement.Display();
-            studentManagement.RetriveRecords();
+            //studentManagement.RetriveRecords();
+            studentManagement.DescendingOrder(students); ;
             
         }
     }

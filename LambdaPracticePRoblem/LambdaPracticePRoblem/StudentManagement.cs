@@ -21,7 +21,7 @@ namespace LambdaPracticePRoblem
                 new Student { Id = 9, Name = "gdha", PhoneNumber = "999995555", Address = "789 St", Age = 30 }
             };
         // Display all student details using lambda expression
-        public void Display()
+        public void Display(Student student)
         {
             studentList.ForEach(student => Console.WriteLine($"ID: {student.Id}, " +
                     $"Name: {student.Name}, Phone: {student.PhoneNumber}, " +
@@ -33,6 +33,13 @@ namespace LambdaPracticePRoblem
             foreach (Student student in studentList.FindAll(x => x.Age >= 12 && x.Age <= 18))
             {
                 Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
+            }
+        }
+        public  void DescendingOrder(List<Student> studentList)
+        {
+            foreach (Student student in studentList.OrderByDescending(x => x.Age))
+            {
+                Display(student);
             }
         }
     }
